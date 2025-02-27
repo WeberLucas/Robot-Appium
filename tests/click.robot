@@ -2,6 +2,9 @@
 
 Library        AppiumLibrary
 
+*** Variables ***
+${START}    QAX
+
 *** Test Cases ***
 
 Deve realizar um click simples
@@ -14,9 +17,9 @@ Deve realizar um click simples
     ...                 autoGrantPermissions=true
 
 
-    Wait Until Page Contains    Yodapp    10
+    Wait Until Page Contains    ${START}     10    5
     
-    Click Text         QAX
+    Click Text                  ${START} 
 
     Sleep        5
 
