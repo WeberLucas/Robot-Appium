@@ -30,7 +30,11 @@ Deve realizar um click simples
 
     Wait Until Element Is Visible    ${menu_item}
     Click Element                    ${menu_item}
-    
+
+    Wait Until Page Contains            Clique simples    5
+    Click Text                          Clique simples 
+    Wait Until Page Contains            Botão clique simples    5
+
     Sleep        5
 
     Close Application
