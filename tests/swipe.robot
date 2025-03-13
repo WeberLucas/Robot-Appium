@@ -15,10 +15,11 @@ Deve poder remover o Darth Vader
     ${start_x}         Set Variable        ${positions}[x]
     ${start_y}         Set Variable        ${positions}[y]
     ${offset_x}        Evaluate            ${positions}[x] - 640
-    ${offset_y}        Set Variable        ${positions}[x]
+    ${offset_y}        Set Variable        ${positions}[y]
 
     Swipe    ${start_x}    ${start_y}    ${offset_x}    ${offset_y}
     Click Element        id=com.qaxperience.yodapp:id/btnRemove
     Wait Until Page Does Not Contain    Darth Vader
+    sleep    3
     Close session
     
